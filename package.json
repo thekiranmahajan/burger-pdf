@@ -1,0 +1,16 @@
+{
+  "name": "burger-pdf",
+  "version": "1.0.0",
+  "description": "Merge Pdf files togather!!",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "keywords": [
+    "pdf",
+    "merger",
+    "express.js"
+  ],
+  "author": "Kiran Mahajan",
+  "license": "ISC"
+}
