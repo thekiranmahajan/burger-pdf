@@ -8,4 +8,9 @@ app.get("/", function (req, res) {
   res.sendFile(path.join(__dirname, "index.html"));
 });
 
+app.post("/merge-pdfs", upload.array("pdfs", 2),async(req, res) => {
+  console.log(req.files)
+  
+});
+
 app.listen(3000);
