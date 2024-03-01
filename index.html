@@ -7,6 +7,7 @@
     <link rel="shortcut icon" href="img/burger.svg" type="image/x-icon" />
     <title>Burger PDF: Merge PDFs</title>
   </head>
+
   <body class="h-full w-full bg-gray-200 flex items-center flex-col p-2">
     <nav
       class="flex justify-center items-center h-20 bg-purple-600 text-white w-3/5 rounded-xl gap-2"
@@ -14,7 +15,13 @@
       <img class="h-12" src="img/burger.svg" alt="Burger Logo" />
       <h2 class="text-2xl">Burger PDF</h2>
     </nav>
-    <form class="w-11/12 h-96 flex items-center justify-between flex-col mt-10">
+
+    <form
+      class="w-11/12 h-96 flex items-center justify-between flex-col mt-10"
+      method="POST"
+      enctype="multipart/form-data"
+      action="/merge-pdfs"
+    >
       <h3 class="text-xl font-bold font-mono">Select PDFs to merge togather</h3>
       <img
         class="h-52 rounded-2xl"
@@ -24,8 +31,15 @@
       <input
         class="text-center ml-20"
         type="file"
-        name="pdf-upload"
-        id="pdf-upload"
+        name="pdfs"
+        id="pdfs"
+        multiple
+        required
+      />
+      <input
+        class="px-5 py-3 rounded-xl text-white font-bold bg-purple-600"
+        type="submit"
+        value="Merge"
       />
     </form>
   </body>
