@@ -3,9 +3,9 @@ const mergePDF = async (docOne, docTwo) => {
   var merger = new PDFMerger.default();
   await merger.add(docOne);
   await merger.add(docTwo);
-  let time = new Date().getTime();
-  await merger.save(`generatedPDFs/${time}.pdf`);
-  return time;
+  let timestamp = new Date().getTime();
+  await merger.save(`public/generatedPDFs/${timestamp}.pdf`);
+  return timestamp;
 };
 
 module.exports = { mergePDF };
