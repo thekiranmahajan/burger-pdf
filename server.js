@@ -40,6 +40,8 @@ app.post("/merge-pdfs", upload.array("pdfs", 2), async (req, res) => {
         throw new Error("Failed to read the merged PDF file.");
       }
       res.setHeader("Content-Type", "application/pdf");
+      res.setHeader("Content-Disposition", "inline; filename=merged.pdf");
+      res.setHeader("Content-Length", data.length);
       res.send(data);
     });
   } catch (error) {
